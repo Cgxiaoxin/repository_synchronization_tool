@@ -1,6 +1,6 @@
 # 仓库同步工具 (Repository Synchronization Tool)
 
-[English](./README_EN.md) | [中文](./README_ZH.md)
+[English](./README.md) | [中文](./README_ZH.md)
 
 一个用于在多个 Git 托管平台之间同步仓库的 CLI 工具。支持 GitHub、GitLab、Gitee、Gitea 等平台，一次配置，多平台镜像，告别手动推送。
 
