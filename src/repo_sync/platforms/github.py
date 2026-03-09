@@ -20,9 +20,12 @@ class GitHubPlatform(BasePlatform):
 
     def _get_api_base_url(self) -> str:
         base = self.config.base_url
-        if "api.github.com" not in base:
+        if "api.github.com" in base:
+            return base
+        elif "github.com" in base:
+            return "https://api.github.com"
+        else:
             return f"{base}/api/v3"
-        return "https://api.github.com"
 
     def _get_clone_url(self, owner: str, name: str) -> str:
         return f"{self.config.base_url}/{owner}/{name}.git"

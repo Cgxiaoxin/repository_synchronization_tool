@@ -132,7 +132,7 @@ class AppConfig:
         """Get platform configuration by platform type."""
         platform_key = platform.value
         if platform_key in self.platforms:
-            config_data = self.platform[platform_key]
+            config_data = self.platforms[platform_key]
             return PlatformConfig(
                 platform=platform,
                 url=config_data.get("url", ""),
